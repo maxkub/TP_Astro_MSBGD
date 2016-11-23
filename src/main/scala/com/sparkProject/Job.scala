@@ -54,7 +54,7 @@ object Job {
 
 
         // Split between training and test sets
-        val Array(training, test) = data_ready.randomSplit(Array(0.9, 0.1))
+        val Array(training, test) = data_ready.randomSplit(Array(0.9, 0.1), seed = 42)
 
         // Parameters used in the grid search
         val regGrid: Array[Double] = (-6.0 to 0.0 by 0.5).toArray
